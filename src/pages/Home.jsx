@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="max-w-7xl mx-auto py-12 px-4 text-center">
       <img src="/logo.jpg" alt="Buhó Security" className="mx-auto mb-4 h-36" />
-      <h1 className="text-4xl font-bold mb-4 text-buhoPrimary">Bienvenido a Buhó Security</h1>
+      <h1 className="text-4xl font-bold mb-4 text-buhoPrimary">Bienvenido a Búho Security</h1>
       <p className="text-lg mb-8">
         Expertos en venta e instalación de sistemas CCTV y videovigilancia.<br/>
         Seguridad, innovación, confianza. ¡Protegemos lo que más importa!
