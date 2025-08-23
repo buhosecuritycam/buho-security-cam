@@ -1,7 +1,7 @@
 export default function VideoGallery() {
   const videos = [
-    "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "https://www.youtube.com/embed/9bZkp7q19f0"
+    "https://www.youtube.com/embed/90cC87_qY-4",
+    "https://www.youtube.com/embed/31Pj7lAklsc"
   ];
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
