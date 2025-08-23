@@ -1,8 +1,9 @@
 import { useState } from "react";
+import ImageCarousel from "./ImageCarousel"; // Ajusta la ruta si tu carpeta es diferente
 
 export default function Gallery({ images }) {
   const [open, setOpen] = useState(false);
-  const [current, setCurrent] = useState(null);
+  const [currentIdx, setCurrentIdx] = useState(0);
 
   return (
     <>
@@ -14,31 +15,21 @@ export default function Gallery({ images }) {
             alt={`Galería ${idx + 1}`}
             className="rounded-lg cursor-pointer hover:scale-105 transition"
             onClick={() => {
-              setCurrent(img);
+              setCurrentIdx(idx);
               setOpen(true);
             }}
           />
         ))}
       </div>
-      {open && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-          onClick={() => setOpen(false)}
-        >
-          <img
-            src={`/${current}`}
-            className="max-w-3xl max-h-[90vh] rounded-lg"
-            alt="Ampliada"
-            onClick={e => e.stopPropagation()}
-          />
-          <button
-            className="absolute top-8 right-8 text-white text-3xl font-bold"
-            onClick={() => setOpen(false)}
-          >
-            ✖
-          </button>
-        </div>
-      )}
+      <ImageCarousel
+        images={images}
+        currentIdx={currentIdx}
+        open={open}
+        onClose={() => setOpen(false)}
+        onChange={idx => {
+          if (idx >= 0 && idx < images.length) setCurrentIdx(idx);
+        }}
+      />
     </>
   );
 }
