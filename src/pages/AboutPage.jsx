@@ -1,7 +1,7 @@
 export default function AboutPage() {
   return (
     <div className="max-w-3xl mx-auto p-8">
-      <img src="/logo.jpg" className="mx-auto mb-4 h-32" alt="Logo Buhó Security" />
+      <img src="/logo.jpg" className="mx-auto mb-4 h-38" alt="Logo Buhó Security" />
       <h1 className="text-3xl font-bold mb-4">Buhó Security</h1>
       <section className="mb-8">
         <h2 className="text-xl font-bold mb-2">Misión</h2>
